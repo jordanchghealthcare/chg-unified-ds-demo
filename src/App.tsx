@@ -17,7 +17,7 @@ import {
   StepIndicator,
   DotStatus,
   ActionMenu,
-} from '@jordanchghealthcare/chg-unified-ds'
+} from '@oxymormon/chg-unified-ds'
 
 function App() {
   const [toggleOn, setToggleOn] = useState(true)

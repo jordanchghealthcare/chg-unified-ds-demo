@@ -1,19 +1,18 @@
 @import 'tailwindcss';
-@config '../../chg-unified-ds/tailwind.config.storybook.cjs';
 
-/* Import design system theme CSS variables */
-@import '../../chg-unified-ds/src/styles/tokens.css';
+/* Import design system tokens */
+@import '@oxymormon/chg-unified-ds/styles/tokens';
 
 /* Import all brand themes */
-@import '../../chg-unified-ds/.storybook/themes/weatherby.css';
-@import '../../chg-unified-ds/.storybook/themes/comphealth.css';
-@import '../../chg-unified-ds/.storybook/themes/connect.css';
-@import '../../chg-unified-ds/.storybook/themes/locumsmart.css';
-@import '../../chg-unified-ds/.storybook/themes/modio.css';
-@import '../../chg-unified-ds/.storybook/themes/wireframe.css';
+@import '@oxymormon/chg-unified-ds/themes/weatherby';
+@import '@oxymormon/chg-unified-ds/themes/comphealth';
+@import '@oxymormon/chg-unified-ds/themes/connect';
+@import '@oxymormon/chg-unified-ds/themes/locumsmart';
+@import '@oxymormon/chg-unified-ds/themes/modio';
+@import '@oxymormon/chg-unified-ds/themes/wireframe';
 
-/* Scan design system source for Tailwind classes */
-@source '../../chg-unified-ds/src/**/*.tsx';
+/* Scan design system for Tailwind classes */
+@source '../node_modules/@oxymormon/chg-unified-ds/dist/**/*.js';
 
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
