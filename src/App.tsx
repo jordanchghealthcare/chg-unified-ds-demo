@@ -109,8 +109,10 @@ function App() {
       {/* About Section */}
       <section className="bg-gray-50 rounded-12 p-16 space-y-12">
         <p className="text-gray-700">
-          This demo showcases components from the <strong>CHG Unified Design System</strong>,
+          Design System Test is a web app built with components from the <strong>CHG Unified Design System</strong>,
           a multi-brand React component library built with React Aria Components and Tailwind CSS 4.
+        </p>
+        <p className="text-gray-700 pb-12">
           All components are imported from the public npm package and support runtime theme switching
           via the <code className="bg-gray-200 px-4 py-2 rounded-4 text-sm">data-theme</code> attribute.
         </p>
