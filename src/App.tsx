@@ -106,6 +106,48 @@ function App() {
         </div>
       </div>
 
+      {/* About Section */}
+      <section className="bg-gray-50 rounded-12 p-16 space-y-4">
+        <p className="text-gray-700">
+          This demo showcases components from the <strong>CHG Unified Design System</strong>,
+          a multi-brand React component library built with React Aria Components and Tailwind CSS 4.
+          All components are imported from the public npm package and support runtime theme switching
+          via the <code className="bg-gray-200 px-4 py-2 rounded-4 text-sm">data-theme</code> attribute.
+        </p>
+        <div className="flex flex-wrap gap-8">
+          <Button
+            variant="primary"
+            size="sm"
+            href="https://github.com/jordanchghealthcare/chg-unified-ds"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span className="flex items-center gap-6">
+              <svg className="size-16" fill="currentColor" viewBox="0 0 24 24">
+                <path fillRule="evenodd" clipRule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0012 2z" />
+              </svg>
+              GitHub Repository
+            </span>
+          </Button>
+          <Button
+            variant="outline"
+            size="sm"
+            href="https://www.npmjs.com/package/@oxymormon/chg-unified-ds"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span className="flex items-center gap-6">
+              <svg className="size-16" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M0 7.334v8h6.666v1.332H12v-1.332h12v-8H0zm6.666 6.664H5.334v-4H3.999v4H1.335V8.667h5.331v5.331zm4 0v1.336H8.001V8.667h5.334v5.332h-2.669v-.001zm12.001 0h-1.33v-4h-1.336v4h-1.335v-4h-1.33v4h-2.671V8.667h8.002v5.331zM10.665 10H12v2.667h-1.335V10z" />
+              </svg>
+              npm Package
+            </span>
+          </Button>
+        </div>
+      </section>
+
+      <Divider />
+
       {/* Buttons */}
       <section className="space-y-4">
         <h2 className="text-xl font-semibold text-gray-800">Buttons</h2>
