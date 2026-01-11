@@ -26,16 +26,20 @@ Always use components from `@jordanchghealthcare/chg-unified-ds` when available:
 - Tabs
 - Tag
 - Textarea
+- TextInput
 - Toast
 - Toggle
 - Tooltip, TooltipTrigger
+
+**Patterns** (higher-level compositions in `patterns/`):
+- ActionMenu, ActionMenu.Item, ActionMenu.Divider
+- SideNavigation, SideNavigationSearch, SideNavigationSection, SideNavigationItem, SideNavigationSubItem, SideNavigationAccount
 
 ## Priority 2: Custom Components with React Aria
 If a component is NOT in the design system above, create it in `src/components/` using [React Aria Components](https://react-spectrum.adobe.com/react-aria/components.html).
 
 Common React Aria components to use for custom implementations:
 - Select, ComboBox for dropdowns with selection
-- Menu, MenuTrigger for action menus
 - Dialog, Modal for overlays
 - Popover for floating content
 - ListBox for selection lists

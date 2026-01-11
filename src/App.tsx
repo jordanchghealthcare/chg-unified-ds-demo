@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import {
   Button,
   Avatar,
@@ -16,12 +16,26 @@ import {
   CounterBadge,
   StepIndicator,
   DotStatus,
+  ActionMenu,
 } from '@jordanchghealthcare/chg-unified-ds'
 
 function App() {
   const [toggleOn, setToggleOn] = useState(false)
   const [selectedRadio, setSelectedRadio] = useState('option1')
   const [selectedChip, setSelectedChip] = useState('chip1')
+  const [dropdownOpen, setDropdownOpen] = useState(false)
+  const [selectedAction, setSelectedAction] = useState('Action')
+  const dropdownRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setDropdownOpen(false)
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => document.removeEventListener('mousedown', handleClickOutside)
+  }, [])
 
   const tabItems = [
     { id: 'tab1', label: 'Overview', content: <p className="text-gray-600">This is the overview tab content.</p> },
@@ -29,15 +43,49 @@ function App() {
     { id: 'tab3', label: 'Settings', content: <p className="text-gray-600">This is the settings tab content.</p> },
   ]
 
-  const stepItems = [
-    { id: '1', label: 'Account', status: 'completed' as const },
-    { id: '2', label: 'Profile', status: 'active' as const },
-    { id: '3', label: 'Review', status: 'pending' as const },
-  ]
-
   return (
     <div data-theme="weatherby" className="p-16 flex flex-col gap-24 bg-base-white min-h-screen max-w-4xl mx-auto">
-      <h1 className="text-3xl font-bold text-gray-900 text-center">Design System Test</h1>
+      {/* Header with dropdown */}
+      <div className="flex justify-between items-center">
+        <h1 className="text-3xl font-bold text-gray-900">Design System Test</h1>
+
+        {/* Custom Dropdown */}
+        <div ref={dropdownRef} className="relative">
+          <Button
+            variant="outline"
+            size="md"
+            onPress={() => setDropdownOpen(!dropdownOpen)}
+          >
+            <span className="flex items-center gap-2">
+              {selectedAction}
+              <svg
+                className={`w-4 h-4 transition-transform ${dropdownOpen ? 'rotate-180' : ''}`}
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </span>
+          </Button>
+
+          {dropdownOpen && (
+            <ActionMenu
+              className="absolute right-0 mt-2 min-w-48 z-50"
+              onItemClick={(value) => {
+                if (value) setSelectedAction(value)
+                setDropdownOpen(false)
+              }}
+            >
+              <ActionMenu.Item value="Edit">Edit</ActionMenu.Item>
+              <ActionMenu.Item value="Duplicate">Duplicate</ActionMenu.Item>
+              <ActionMenu.Divider />
+              <ActionMenu.Item value="Archive">Archive</ActionMenu.Item>
+              <ActionMenu.Item value="Delete">Delete</ActionMenu.Item>
+            </ActionMenu>
+          )}
+        </div>
+      </div>
 
       {/* Buttons */}
       <section className="space-y-4">
@@ -157,7 +205,11 @@ function App() {
       {/* Step Indicator */}
       <section className="space-y-4">
         <h2 className="text-xl font-semibold text-gray-800">Step Indicator</h2>
-        <StepIndicator items={stepItems} orientation="horizontal" />
+        <StepIndicator orientation="horizontal">
+          <StepIndicator.Item status="complete" label="Account" />
+          <StepIndicator.Item status="active" label="Profile" />
+          <StepIndicator.Item status="incomplete" label="Review" />
+        </StepIndicator>
       </section>
 
       <Divider />
