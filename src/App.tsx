@@ -65,7 +65,11 @@ function App() {
             size="md"
             onPress={() => setDropdownOpen(!dropdownOpen)}
           >
-            <span className="flex items-center gap-2">
+            <span className="flex items-center gap-8">
+              <span
+                className="size-8 rounded-full shrink-0"
+                style={{ backgroundColor: brands.find(b => b.id === selectedTheme)?.color }}
+              />
               {brands.find(b => b.id === selectedTheme)?.label}
               <svg
                 className={`w-4 h-4 transition-transform ${dropdownOpen ? 'rotate-180' : ''}`}
