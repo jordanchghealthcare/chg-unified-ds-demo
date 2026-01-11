@@ -28,12 +28,12 @@ function App() {
   const dropdownRef = useRef<HTMLDivElement>(null)
 
   const brands = [
-    { id: 'weatherby', label: 'Weatherby' },
-    { id: 'comphealth', label: 'CompHealth' },
-    { id: 'connect', label: 'Connect' },
-    { id: 'locumsmart', label: 'LocumSmart' },
-    { id: 'modio', label: 'Modio' },
-    { id: 'wireframe', label: 'Wireframe' },
+    { id: 'weatherby', label: 'Weatherby', color: '#a9174a' },
+    { id: 'comphealth', label: 'CompHealth', color: '#5e4775' },
+    { id: 'connect', label: 'Connect', color: '#0093d4' },
+    { id: 'locumsmart', label: 'LocumSmart', color: '#008dcf' },
+    { id: 'modio', label: 'Modio', color: '#2c91b6' },
+    { id: 'wireframe', label: 'Wireframe', color: '#818181' },
   ]
 
   useEffect(() => {
@@ -88,7 +88,13 @@ function App() {
             >
               {brands.map((brand) => (
                 <ActionMenu.Item key={brand.id} value={brand.id}>
-                  {brand.label}
+                  <span className="flex items-center gap-8">
+                    <span
+                      className="size-8 rounded-full shrink-0"
+                      style={{ backgroundColor: brand.color }}
+                    />
+                    {brand.label}
+                  </span>
                 </ActionMenu.Item>
               ))}
             </ActionMenu>
