@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+@config '../node_modules/@oxymormon/chg-unified-ds/tailwind.config.storybook.cjs';
 
 /* Import design system tokens */
 @import '@oxymormon/chg-unified-ds/styles/tokens';
