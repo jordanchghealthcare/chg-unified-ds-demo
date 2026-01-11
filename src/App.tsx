@@ -20,7 +20,7 @@ import {
 } from '@jordanchghealthcare/chg-unified-ds'
 
 function App() {
-  const [toggleOn, setToggleOn] = useState(false)
+  const [toggleOn, setToggleOn] = useState(true)
   const [selectedRadio, setSelectedRadio] = useState('option1')
   const [selectedChip, setSelectedChip] = useState('chip1')
   const [dropdownOpen, setDropdownOpen] = useState(false)
@@ -246,13 +246,13 @@ function App() {
         <h2 className="text-xl font-semibold text-gray-800">Accordion</h2>
         <Accordion>
           <AccordionItem title="Section 1">
-            <p className="text-gray-600">This is the content for section 1. It can contain any elements.</p>
+            <p className="text-gray-600 px-16">This is the content for section 1. It can contain any elements.</p>
           </AccordionItem>
           <AccordionItem title="Section 2">
-            <p className="text-gray-600">This is the content for section 2. Accordions are great for FAQs.</p>
+            <p className="text-gray-600 px-16">This is the content for section 2. Accordions are great for FAQs.</p>
           </AccordionItem>
           <AccordionItem title="Section 3">
-            <p className="text-gray-600">This is the content for section 3. They help organize information.</p>
+            <p className="text-gray-600 px-16">This is the content for section 3. They help organize information.</p>
           </AccordionItem>
         </Accordion>
       </section>
