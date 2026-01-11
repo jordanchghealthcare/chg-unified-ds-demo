@@ -24,8 +24,17 @@ function App() {
   const [selectedRadio, setSelectedRadio] = useState('option1')
   const [selectedChip, setSelectedChip] = useState('chip1')
   const [dropdownOpen, setDropdownOpen] = useState(false)
-  const [selectedAction, setSelectedAction] = useState('Action')
+  const [selectedTheme, setSelectedTheme] = useState('weatherby')
   const dropdownRef = useRef<HTMLDivElement>(null)
+
+  const brands = [
+    { id: 'weatherby', label: 'Weatherby' },
+    { id: 'comphealth', label: 'CompHealth' },
+    { id: 'connect', label: 'Connect' },
+    { id: 'locumsmart', label: 'LocumSmart' },
+    { id: 'modio', label: 'Modio' },
+    { id: 'wireframe', label: 'Wireframe' },
+  ]
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -44,7 +53,7 @@ function App() {
   ]
 
   return (
-    <div data-theme="weatherby" className="p-16 flex flex-col gap-24 bg-base-white min-h-screen max-w-4xl mx-auto">
+    <div data-theme={selectedTheme} className="p-16 flex flex-col gap-24 bg-base-white min-h-screen max-w-4xl mx-auto">
       {/* Header with dropdown */}
       <div className="flex justify-between items-center">
         <h1 className="text-3xl font-bold text-gray-900">Design System Test</h1>
@@ -57,7 +66,7 @@ function App() {
             onPress={() => setDropdownOpen(!dropdownOpen)}
           >
             <span className="flex items-center gap-2">
-              {selectedAction}
+              {brands.find(b => b.id === selectedTheme)?.label}
               <svg
                 className={`w-4 h-4 transition-transform ${dropdownOpen ? 'rotate-180' : ''}`}
                 fill="none"
@@ -73,15 +82,15 @@ function App() {
             <ActionMenu
               className="absolute right-0 mt-2 min-w-48 z-50"
               onItemClick={(value) => {
-                if (value) setSelectedAction(value)
+                if (value) setSelectedTheme(value)
                 setDropdownOpen(false)
               }}
             >
-              <ActionMenu.Item value="Edit">Edit</ActionMenu.Item>
-              <ActionMenu.Item value="Duplicate">Duplicate</ActionMenu.Item>
-              <ActionMenu.Divider />
-              <ActionMenu.Item value="Archive">Archive</ActionMenu.Item>
-              <ActionMenu.Item value="Delete">Delete</ActionMenu.Item>
+              {brands.map((brand) => (
+                <ActionMenu.Item key={brand.id} value={brand.id}>
+                  {brand.label}
+                </ActionMenu.Item>
+              ))}
             </ActionMenu>
           )}
         </div>

@@ -3,7 +3,14 @@
 
 /* Import design system theme CSS variables */
 @import '../../chg-unified-ds/src/styles/tokens.css';
+
+/* Import all brand themes */
 @import '../../chg-unified-ds/.storybook/themes/weatherby.css';
+@import '../../chg-unified-ds/.storybook/themes/comphealth.css';
+@import '../../chg-unified-ds/.storybook/themes/connect.css';
+@import '../../chg-unified-ds/.storybook/themes/locumsmart.css';
+@import '../../chg-unified-ds/.storybook/themes/modio.css';
+@import '../../chg-unified-ds/.storybook/themes/wireframe.css';
 
 /* Scan design system source for Tailwind classes */
 @source '../../chg-unified-ds/src/**/*.tsx';
