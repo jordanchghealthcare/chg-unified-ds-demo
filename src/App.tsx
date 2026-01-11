@@ -58,7 +58,7 @@ function App() {
       <div className="flex justify-between items-center">
         <h1 className="text-3xl font-bold text-gray-900">Design System Test</h1>
 
-        {/* Custom Dropdown */}
+        {/* Brand Dropdown */}
         <div ref={dropdownRef} className="relative">
           <Button
             variant="outline"
