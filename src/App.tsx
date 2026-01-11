@@ -145,6 +145,20 @@ function App() {
               npm Package
             </span>
           </Button>
+          <Button
+            variant="outline"
+            size="sm"
+            href="https://www.chg-unified-design.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span className="flex items-center gap-6">
+              <svg className="size-16" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M6.002 3.5a.5.5 0 0 0-.5.5v16a.5.5 0 0 0 .5.5h12a.5.5 0 0 0 .5-.5V8.121a.5.5 0 0 0-.146-.354l-4.121-4.121a.5.5 0 0 0-.354-.146H6.002zM4.502 4a2 2 0 0 1 2-2h7.879a2 2 0 0 1 1.414.586l4.121 4.121A2 2 0 0 1 20.502 8.12V20a2 2 0 0 1-2 2h-12a2 2 0 0 1-2-2V4zm3.5 5.75a.75.75 0 0 1 .75-.75h6.5a.75.75 0 0 1 0 1.5h-6.5a.75.75 0 0 1-.75-.75zm.75 2.25a.75.75 0 0 0 0 1.5h6.5a.75.75 0 0 0 0-1.5h-6.5zm0 3a.75.75 0 0 0 0 1.5h4.5a.75.75 0 0 0 0-1.5h-4.5z" />
+              </svg>
+              Storybook
+            </span>
+          </Button>
         </div>
       </section>
 
