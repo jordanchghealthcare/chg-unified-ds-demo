@@ -107,7 +107,7 @@ function App() {
       </div>
 
       {/* About Section */}
-      <section className="bg-gray-50 rounded-12 p-16 space-y-4">
+      <section className="bg-gray-50 rounded-12 p-16 space-y-12">
         <p className="text-gray-700">
           This demo showcases components from the <strong>CHG Unified Design System</strong>,
           a multi-brand React component library built with React Aria Components and Tailwind CSS 4.
