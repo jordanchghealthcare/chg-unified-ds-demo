@@ -1,6 +1,6 @@
 # Project Overview
 
-This is a test application for the CHG Healthcare unified design system (`@jordanchghealthcare/chg-unified-ds`). It serves as a sandbox for testing design system components in a React environment.
+This is a demo application for the CHG Healthcare unified design system (`@oxymormon/chg-unified-ds`). It serves as a sandbox for testing design system components in a React environment.
 
 ## Commands
 
@@ -21,11 +21,11 @@ This is a test application for the CHG Healthcare unified design system (`@jorda
 
 ### Design System Integration
 
-The app imports components from `@jordanchghealthcare/chg-unified-ds` (installed via GitHub Packages). The CSS configuration in `src/index.css` is critical:
+The app imports components from `@oxymormon/chg-unified-ds` (public NPM package). The CSS configuration in `src/index.css`:
 
-- Imports the design system's Tailwind config from a sibling directory (`../../chg-unified-ds/`)
-- Imports theme CSS variables (tokens.css, weatherby.css)
-- Uses `@source` directive to scan design system source files for Tailwind class detection
+- Imports the design system's Tailwind config from `node_modules`
+- Imports design tokens and all brand theme CSS variables
+- Uses `@source` directive to scan design system dist files for Tailwind class detection
 
 ### Theming
 
@@ -33,5 +33,4 @@ Components are themed via the `data-theme` attribute (e.g., `data-theme="weather
 
 ## Notes
 
-- The `.npmrc` configures GitHub Packages registry for the `@jordanchghealthcare` scope
-- The design system is expected to be in a sibling directory for local development (relative imports in index.css)
+- The `.npmrc` configures GitHub Packages registry for the `@jordanchghealthcare` scope (legacy)

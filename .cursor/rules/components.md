@@ -1,7 +1,7 @@
 # Component Usage Rules
 
 ## Priority 1: CHG Unified Design System
-Always use components from `@jordanchghealthcare/chg-unified-ds` when available:
+Always use components from `@oxymormon/chg-unified-ds` when available:
 
 **Available components:**
 - Accordion, AccordionItem
