@@ -45,4 +45,4 @@ npm run preview
 
 ## Using the Design System
 
-See the [CHG Unified Design System README](https://github.com/jordanchghealthcare/chg-unified-ds#readme) for installation and usage instructions.
+See the [CHG Unified Design System README](https://github.com/PlayaLink/chg-unified-ds#readme) for installation and usage instructions.

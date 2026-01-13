@@ -33,4 +33,4 @@ Components are themed via the `data-theme` attribute (e.g., `data-theme="weather
 
 ## Notes
 
-- The `.npmrc` configures GitHub Packages registry for the `@jordanchghealthcare` scope (legacy)
+- The `.npmrc` configures GitHub Packages registry for the `@playalink` scope (legacy)

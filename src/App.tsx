@@ -120,7 +120,7 @@ function App() {
           <Button
             variant="primary"
             size="sm"
-            href="https://github.com/jordanchghealthcare/chg-unified-ds"
+            href="https://github.com/PlayaLink/chg-unified-ds"
             target="_blank"
             rel="noopener noreferrer"
           >
